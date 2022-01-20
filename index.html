@@ -6,14 +6,14 @@
       name="description"
       content="The latest international news from MMA Daily, featuring top stories from around the world and breaking news, as it happens."
     />
-    <meta name="author" content="dukibu" />
+    <meta name="author" content="mmaDaily" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="google-site-verification"
       content="ivOD_GLgpiw0meopABIpshnxOP2xyCzaIvGMQ31XpnA"
     />
 
-    <title>Home | MMA Daily</title>
+    <title>Jones | MMA Daily</title>
 
     <link
       href="https://fonts.googleapis.com/css?family=Exo+2:400,700|Open+Sans&display=swap"
@@ -30,23 +30,12 @@
 
   <body id="top">
     <div class="content-wrap">
-      <!--[if IE]>
-        <p class="browserupgrade">
-          You are using an <strong>outdated</strong> browser. Please
-          <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-          your experience and security.
-        </p>
-      <![endif]-->
-
-      <!-- Header -->
       <header role="banner">
         <section class="nav-section">
-          <!-- Logo -->
           <div class="logo">
             <a href="index.html" title="MMA Daily logo">MMA Daily</a>
           </div>
 
-          <!-- Navigation -->
           <nav class="nav-menu" role="navigation">
             <ul class="nav-links">
               <li><a href="index.html" title="Home">Начало</a></li>
@@ -60,10 +49,8 @@
             </div>
           </nav>
         </section>
-        <!-- end of class="nav-section"-->
       </header>
 
-      <!-- Main -->
       <main class="main" role="main">
         <div class="top-news">
           <section class="latest-news">
@@ -77,7 +64,6 @@
               </a>
             </div>
           </section>
-          <!-- End of class="latest-news" -->
         </div>
 
         <section class="mma" id="mma">
@@ -151,7 +137,6 @@
                 <img src="images/coming-soon.jpg" alt="Soon to come" />
               </div>
               <div class="story-headline">
-                <h3>Предстоят</h3>
                 <p class="exact-time">20:53h</p>
               </div>
             </a>
@@ -163,7 +148,6 @@
                 <img src="images/coming-soon.jpg" alt="Soon to comer" />
               </div>
               <div class="story-headline">
-                <h3>Предстоят</h3>
                 <p class="exact-time">19:58h</p>
               </div>
             </a>
@@ -175,16 +159,13 @@
                 <img src="images/coming-soon.jpg" alt="Soon to come" />
               </div>
               <div class="story-headline">
-                <h3>Предстоят</h3>
                 <p class="exact-time">18:55h</p>
               </div>
             </a>
           </div>
         </section>
       </main>
-      <!-- End of class="main" -->
 
-      <!-- Footer Links -->
       <div class="footer-links">
         <ul class="social-media-links">
           <li>
@@ -201,23 +182,20 @@
 
         <ul class="info-links">
           <li>
-            <a href="/termsAndConditions.html" title="Terms & Conditions"
+            <a href="../terms-and-conditions.html" title="Terms & Conditions"
               >Terms & Conditions</a
             >
           </li>
         </ul>
       </div>
-      <!-- End of class="footer-links" -->
 
-      <!-- Footer Credit -->
       <footer role="contentinfo" class="content-info">
         <p>2019 &copy; by MMA Daily</p>
         <a class="scroll-top" href="#top"></a>
+        <img src="./images/map.png" />
       </footer>
     </div>
-    <!-- end of class="content-wrap" -->
 
-    <!-- <script src="js/modernizr.js"></script> -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -225,13 +203,21 @@
     ></script>
     <script src="index.js"></script>
 
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <!--
-      <script>
-        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-      </script>
-      <script src="https://www.google-analytics.com/analytics.js" async defer></script> 
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script
+      src="https://www.google-analytics.com/analytics.js"
+      async
+      defer
+    ></script>
     -->
   </body>
 </html>
