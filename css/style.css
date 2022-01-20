@@ -13,10 +13,6 @@
   --gray80: #cccccc;
 }
 
-/* -------------------------------------------------------------
-      Accessibility (Text meant only for screen readers)
-     ------------------------------------------------------------- */
-
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -45,14 +41,6 @@
   width: auto;
   z-index: 100000;
 }
-
-/* -------------------------------------------------------------
-      Global Styles
-     ------------------------------------------------------------- */
-
-/*
-   * Box-sizing Reset
-   */
 
 body,
 html {
@@ -115,6 +103,37 @@ img {
 /* 
    * Nav Wrapper
    */
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
 
 .nav-section {
   background: hsl(0, 0%, 15%);
@@ -217,7 +236,14 @@ img {
      ------------------------------------------------------------- */
 
 .headline {
-  background: url(../images/politics8.jpg);
+  background: url(../images/moreno-figueiredo.jpg);
+}
+.headline,
+.headline-moreno,
+.headline-masvidal,
+.headline-jones,
+.headline-perreira,
+.headline-ngannou {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -228,7 +254,20 @@ img {
   align-items: start;
   justify-content: space-between;
 }
+.headline-masvidal {
+  background: url(../images/masvidal_usman.jpg);
+}
+.headline-perreira {
+  background: url(../images/perreira.jpg);
+}
 
+.headline-ngannou {
+  background: url(../images/ngannou.jpg);
+}
+
+.headline-jones {
+  background: url(../images/jones_heavyweight.jpg);
+}
 .headline p {
   margin: 0;
   padding: 15px;
@@ -247,44 +286,13 @@ img {
 }
 
 .top-stories h2,
-.world h2,
-.politics h2,
-.business h2,
-.sport h2,
-.entertainment h2,
-.more h2 {
+.mma h2,
+.kickboxing h2 {
   padding: 10px;
   margin: 10px;
   background: var(--dark-medium-gray);
   text-transform: uppercase;
   font-size: 0.8rem;
-}
-
-.top-stories .headline {
-  display: flex;
-  margin: 10px;
-  justify-content: flex-end;
-}
-
-.top-stories .headline-1 {
-  background: url(../images/politics1.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.top-stories .headline-2 {
-  background: url(../images/politics3.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.top-stories .headline-3 {
-  background: url(../images/politics6.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .story a {
@@ -313,30 +321,6 @@ img {
   font-weight: normal;
 }
 
-.more-headline {
-  margin: 10px;
-  font-size: 0.9rem;
-}
-
-.more-headline h3 {
-  color: var(--smoky-black);
-  margin-bottom: 0px;
-  text-transform: capitalize;
-}
-
-.more-headline p.exact-time {
-  margin-top: 0;
-  color: var(--smoky-black);
-}
-
-/* -------------------------------------------------------------
-      Footer
-     ------------------------------------------------------------- */
-
-/*
-   * Footer Links
-   */
-
 .footer-links {
   padding: 20px;
   background: var(--raisin-black);
@@ -344,7 +328,6 @@ img {
 
 .footer-links a {
   display: flex;
-  justify-content: center;
   padding: 10px;
   color: var(--anti-flash-white);
 }
@@ -369,22 +352,9 @@ img {
 
 .social-media-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background: var(--lapis-lazuli);
   width: 100px;
-}
-
-.info-links {
-  padding-top: 20px;
-  padding-bottom: 25px;
-}
-
-/*
-   * Main Footer Links
-   */
-
-.main-footer-links {
-  padding-top: 20px;
 }
 
 /*
@@ -420,7 +390,6 @@ footer {
 
 footer p {
   display: flex;
-  justify-content: center;
   padding: 10px;
   background: var(--smoky-black);
   color: var(--anti-flash-white);
@@ -546,42 +515,39 @@ p.intro-text {
     min-height: 400px;
   }
 
-  .headline-1,
-  .headline-2,
-  .headline-3 {
-    min-height: 200px;
+  .headline-ngannou {
+    height: 500px;
+  }
+  .headline-masvidal {
+    height: 610px;
+  }
+  .headline-perreira {
+    height: 500px;
   }
 
-  .world {
+  .headline-jones {
+    display: flex;
+    justify-content: center;
+    height: 390px;
+    width: 690px;
+  }
+  .mma {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .world h2 {
+  .mma h2 {
     grid-column: 1/4;
     grid-row: 1/2;
   }
 
-  .world .story-1 {
+  .mma .story-1 {
     grid-column: 1/4;
   }
 
-  .politics,
-  .business,
-  .sport,
-  .entertainment,
-  .more {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .politics h2,
-  .business h2,
-  .sport h2,
-  .entertainment h2,
-  .more h2 {
-    grid-column: 1/3;
-    grid-row: 1/2;
+  .kickboxing {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -690,10 +656,9 @@ p.intro-text {
      */
 
   .main-article {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: 10px;
-    grid-gap: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 0 300px;
   }
 
   .main-article .article {
@@ -706,7 +671,6 @@ p.intro-text {
 
   .article h2 {
     font-size: 2rem;
-    padding-top: 40px;
     padding-bottom: 10px;
     padding-left: 0;
   }
@@ -728,17 +692,6 @@ p.intro-text {
   /*
      * Top News - Wide screen(min-width: 56em)
      */
-
-  .top-news {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-  }
-
-  .top-news .latest-news {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    margin: 10px;
-  }
 
   .latest-news h1:first-child {
     font-size: 2rem;
@@ -766,51 +719,51 @@ p.intro-text {
   }
 
   /*
-     * World - Wide screen(min-width: 56em)
+     * mma - Wide screen(min-width: 56em)
      */
 
-  .world {
+  .mma {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
   }
 
-  .world h2 {
+  .mma h2 {
     grid-column: 1 / span 5;
   }
 
-  .world .story-1 {
+  .mma .story-1 {
     grid-column: 1/4;
   }
 
-  .world .story-2 {
+  .mma .story-2 {
     grid-column: 1/4;
     grid-row: 3/4;
   }
 
-  .world .story-3 {
+  .mma .story-3 {
     grid-column: 4/6;
     grid-row: 2/4;
   }
 
-  .world .story-3 a {
+  .mma .story-3 a {
     display: flex;
     flex-direction: column;
   }
 
   /*
-     * Politics - Wide screen(min-width: 56em)
+     * kickboxing - Wide screen(min-width: 56em)
      */
 
-  .politics {
+  .kickboxing {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .politics h2 {
+  .kickboxing h2 {
     grid-column: 1 / span 5;
   }
 
-  .politics .story a {
+  .kickboxing .story a {
     display: flex;
     flex-direction: column;
   }
@@ -837,58 +790,30 @@ p.intro-text {
      * More - Wide screen(min-width: 56em)
      */
 
-  .more a {
-    border-bottom: 1px solid var(--smoky-black);
-    width: 75%;
-    margin-left: 10px;
-    color: var(--smoky-black);
-  }
-
-  .more a:nth-child(8),
-  .more a:nth-child(9) {
-    border: none;
-  }
-
   /*
      * Footer - Wide screen(min-width: 56em)
      */
 
   footer,
   .footer-links {
-    height: 100px;
-  }
-
-  .footer-links {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .info-links {
-    padding-top: 0;
-    grid-column: 1/2;
-    grid-row: 1/3;
-  }
-
-  .main-footer-links {
-    padding-top: 0;
-    grid-column: 2/3;
-    grid-row: 1/3;
+    display: flex;
+    width: 100%;
+    justify-content: end;
   }
 
   .social-media-links {
-    height: 30px;
-    grid-column: 4/4;
     display: flex;
     align-items: center;
   }
 
   .content-info {
     display: flex;
-    align-items: start;
-    padding-left: 10px;
-    padding-top: 30px;
     font-size: 14px;
+    justify-content: start;
   }
 }
